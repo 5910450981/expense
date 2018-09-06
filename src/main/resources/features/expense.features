@@ -1,0 +1,9 @@
+Feature: Expense
+  As a person
+  I want to add expense to SpenderEnroll
+  so that I can see balance
+
+  Scenario: Basic expense
+    Given a person have balance 15000 exists
+    When I spend rent 7000 for my car
+    Then I have balance is 8000

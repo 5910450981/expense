@@ -1,0 +1,9 @@
+Feature: Income
+  As a person
+  I want to add income to SpenderEnroll
+  so that I can see balance
+
+  Scenario: Basic income
+    Given a person have balance 15000 exists
+    When I get salary 15000 from my jobs
+    Then I have balance is 30000
