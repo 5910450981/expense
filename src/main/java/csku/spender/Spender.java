@@ -2,10 +2,12 @@ package csku.spender;
 
 public class Spender {
 
+    private String record;
     private int income;
     private int expense;
 
-    public Spender(int amount) {
+    public Spender(String record, int amount) {
+        this.record = record;
         if (amount >= 0){
             this.income = amount;
             this.expense = 0;
@@ -15,6 +17,9 @@ public class Spender {
         }
     }
 
+    public String getRecord() {
+        return record;
+    }
 
     public int getIncome() {
         return income;
