@@ -1,0 +1,4 @@
+Salary,Income,3000.0,2018-10-16
+Food,Expense,40.0,2018-10-16
+Extra Income,Income,4500.0,2018-10-16
+Gift,Expense,3000.0,2018-10-16

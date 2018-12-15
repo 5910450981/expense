@@ -1,0 +1,9 @@
+Feature: Edit
+  As a person
+  I want to edit income to SpenderEnroll
+  so that I can see balance
+
+  Scenario: Basic income
+    Given a person have balance 2960 exists
+    When I edit salary 3000 to 4000
+    Then I have balance is 3960
