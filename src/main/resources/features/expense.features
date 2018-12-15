@@ -4,6 +4,6 @@ Feature: Expense
   so that I can see balance
 
   Scenario: Basic expense
-    Given a person have balance 15000 exists
-    When I spend rent 7000 for my car
-    Then I have balance is 8000
+    Given a person have balance 3000 exists
+    When I spend food 40 from store
+    Then I have balance is 2960

@@ -4,6 +4,6 @@ Feature: Income
   so that I can see balance
 
   Scenario: Basic income
-    Given a person have balance 15000 exists
-    When I get salary 15000 from my jobs
-    Then I have balance is 30000
+    Given a person have balance 0 exists
+    When I get salary 3000 from my jobs
+    Then I have balance is 3000
