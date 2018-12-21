@@ -56,6 +56,11 @@ public class Spender {
         return date;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Record : " + record +
+                " Type : " + type +
+                " Amount : " + amount +
+                " Date : " + date;
+    }
 }
