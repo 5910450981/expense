@@ -38,6 +38,27 @@ public class SpenderEnrollDB {
 //        }
 //    }
 
+    public void add(String record, String type, String amount, String date) {
+        try {
+            Class.forName("org.sqlite.JDBC");
+            String dbURL = "jdbc:sqlite:SpenderDB.db";
+            Connection conn = DriverManager.getConnection(dbURL);
+            if (conn != null) {
+                String query = "insert into SpenderEnroll (record, type, Amount, date) values " +
+                        "('" + record + "' , '" + type + "' , '" + amount + "' , '" + date + "')";
+                PreparedStatement p = conn.prepareStatement(query);
+                p.executeUpdate();
+            }
+            conn.close();
+        }
+
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void read() {
         try {
             //setup
@@ -69,6 +90,5 @@ public class SpenderEnrollDB {
         read();
         return this.spenders;
     }
-
 
 }
